@@ -22,10 +22,7 @@ namespace Thycotic_Test
 
         public decimal DetermineCarPrice(Car car)
         {
-            decimal purchaseValue = car.PurchaseValue;
-            decimal calculatedValue = purchaseValue;
-
-            Console.WriteLine("Purchase value : " + calculatedValue);
+            decimal calculatedValue = car.PurchaseValue;
 
             if (car.AgeInMonths <= (months*10))
             {
@@ -52,10 +49,7 @@ namespace Thycotic_Test
             
             calculatedValue = car.NumberOfPreviousOwners == 0 ? (calculatedValue + (calculatedValue * (decimal)priceDeduction["PREVIOUS_OWNER_ADDITION"])) : calculatedValue;
 
-            Console.WriteLine("New value after owner addition : " + calculatedValue);
-
-            return calculatedValue;
-        
+            return calculatedValue;        
         }
     }
 }
