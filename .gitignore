@@ -4,9 +4,9 @@ packages/
 Thycotic_Test/bin/
 Thycotic_Test/obj/
 Thycotic_Test/Properties/
-Thycotic_Test/Thycotic_Test.csproj
+#Thycotic_Test/Thycotic_Test.csproj
 
 Thycotic_Test.Tests/bin/
 Thycotic_Test.Tests/obj/
 Thycotic_Test.Tests/Properties/
-Thycotic_Test.Tests/Thycotic_Test.Tests.csproj
+#Thycotic_Test.Tests/Thycotic_Test.Tests.csproj
