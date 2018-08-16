@@ -27,13 +27,13 @@ namespace Thycotic_Test
 
             Console.WriteLine("Purchase value : " + calculatedValue);
 
-            if (car.AgeInMonths <= (months*10))
+            if (car.AgeInMonths > 0 && car.AgeInMonths <= months*10)
             {
                 calculatedValue = calculatedValue - ((calculatedValue * (decimal)priceDeduction["AGE_DEDUCTION"]) * car.AgeInMonths);
             }
 
             int mileUnits = 0;
-            mileUnits = (0 <= car.NumberOfMiles && car.NumberOfMiles <= milage) ? car.NumberOfMiles/1000 : (car.NumberOfMiles > 150000) ? milage/1000 : 0;
+            mileUnits = (car.NumberOfMiles > 0 && car.NumberOfMiles <= milage) ? car.NumberOfMiles/1000 : (car.NumberOfMiles > 150000) ? milage/1000 : 0;
             
             if (mileUnits > 0)
             {
@@ -45,7 +45,7 @@ namespace Thycotic_Test
                 calculatedValue = calculatedValue - (calculatedValue * (decimal)priceDeduction["PREVIOUS_OWNER_DEDUCTION"]);
             }
 
-            if (car.NumberOfCollisions <= collisions)
+            if (car.NumberOfCollisions > 0 && car.NumberOfCollisions <= collisions)
             {
                 calculatedValue = calculatedValue - ((calculatedValue * (decimal)priceDeduction["COLLOSION_DEDUCTION"]) * car.NumberOfCollisions);
             }
